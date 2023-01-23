@@ -1,0 +1,1072 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Xiaomi Twitter Data Analysis Report</title>
+
+  <!-- SEO -->
+  <meta name="keywords" content="xiaomi, mi11, twitter, social media analysis, report, China">
+  <meta name="description" content="Twitter hashtag analysis for #xiaomi and #mi11">
+  <meta name="author" content="Yilin Li">
+
+<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+	
+	<!-- UIkit JS -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
+
+
+  <!-- Favicons -->
+  <link href="images/small-logo.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Selecao - v2.3.0
+  * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <!-- Load c3.css -->
+  <link href="js/c3.min.css" rel="stylesheet" type="text/css">
+  <!-- Load d3.js and c3.js -->
+  <script type="text/javascript" src="js/d3.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/c3.min.js"></script>
+
+  <!-- emoji -->
+  <!-- https://github.com/node-modules/emoji -->
+  <link href="http://cdn.staticfile.org/emoji/0.2.2/emoji.css" rel="stylesheet" type="text/css" />
+  <script src="http://cdn.staticfile.org/jquery/2.1.0/jquery.min.js"></script>
+  <script src="http://cdn.staticfile.org/emoji/0.2.2/emoji.js"></script>
+
+
+
+</head>
+
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="#">#Mi11 & #Xiaomi</a></h1>
+      </div>
+
+      <!-- .nav-menu -->
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#Introduction">Intro</a></li>
+          <li><a href="#About">Xiaomi</a></li>
+          <li><a href="#Hashtags">Hashtags</a></li>
+          <li><a href="#DataAcquisition">Data Acquisition</a></li>
+          <li><a href="#DataAnalysis">Data Analysis</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+    <!-- <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Twitter Data Analysis Report</h2>
+          <p class="animate__animated fanimate__adeInUp">How a Chinese brand connect to overseas audiences</p>
+          <p class="animate__animated fanimate__adeInUp">Author: Yilin Li</p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- animation wave -->
+   <!-- <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg> -->
+
+  </section><!-- End Hero -->
+
+
+<div id="huandengpian" class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: push;autoplay-interval:100;autoplay: true">
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+                <img src="images/made.jpeg" alt="" uk-cover>
+            </div>
+            <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+            <div class="uk-position-center uk-position-medium uk-text-center">
+                <div uk-slideshow-parallax="scale: 1,1,0.8">
+                    <h2 uk-slideshow-parallax="x: 200,0,0">Heading</h2>
+                    <p uk-slideshow-parallax="x: 400,0,0;">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+                <img src="images/made.jpeg" alt="" uk-cover>
+            </div>
+            <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+            <div class="uk-position-center uk-position-medium uk-text-center">
+                <div uk-slideshow-parallax="scale: 1,1,0.8">
+                    <h2 uk-slideshow-parallax="x: 200,0,0">Heading</h2>
+                    <p uk-slideshow-parallax="x: 400,0,0;">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+                <img src="images/made.jpeg" alt="" uk-cover>
+            </div>
+            <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+            <div class="uk-position-center uk-position-medium uk-text-center">
+                <div uk-slideshow-parallax="scale: 1,1,0.8">
+                    <h2 uk-slideshow-parallax="x: 200,0,0">Heading</h2>
+                    <p uk-slideshow-parallax="x: 400,0,0;">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+
+  <main id="main">
+
+    <!-- ======= Introduction Section ======= -->
+    <section id="Introduction" class="about">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Introduction</h2>
+          <p>Made in China?</p>
+        </div>
+
+        <div class="row content" data-aos="fade-up">
+          <div class="col-lg-9 text-center text-lg-left">
+            <p>
+              For many large Chinese companies, the opportunity for future growth lies in overseas markets. In an
+              environment of economic conservatism and increased volatility in global markets, it is more important than
+              ever for Chinese brands to remain connected, open, and innovative in the global marketplace.
+            </p>
+            <p>
+              However, for too long 'Made in China' has been labeled as 'low-end, cheap quality', and how to expand
+              overseas is one of the big questions for many Chinese technology companies. Proving Chinese technology and
+              innovation to overseas markets is an arduous process. Very often, the self-perception of a Chinese brand
+              is very different from the perception of that brand in an international context.
+            </p>
+            <br>
+            <!-- image-made-in-China -->
+            <img class="image" src="images/made.jpeg" alt="">
+            <span>Photo by <a
+                href="https://unsplash.com/@archduk3?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Carl
+                Nenzen Loven</a> on <a
+                href="https://unsplash.com/s/photos/china?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+
+            <br><br>
+
+            <p>
+              So, what can be done to bridge this perception gap in China's technology manufacturing industry? What can
+              be done to successfully reverse the stereotype of "Made in China"? Chinese technology companies such as
+              Xiaomi have one thing in common on this issue: they use the language of their target audience to
+              communicate their brand message. Many Chinese brands have realized that it is more effective to leverage
+              specific user groups with global reach than to reach the general public. In today's digital age, Chinese
+              companies looking to reach digital millennials must start with global social media platforms.
+            </p>
+            <p>
+              Twitter is undoubtedly the most influential social media platform in the world today and a platform for
+              people to learn about global trends and join the discussion on hot topics. As the world's largest public
+              conversation platform, Twitter provides a powerful channel for Chinese brands to keep their finger on the
+              pulse of overseas consumer trends in real time. For Chinese brands aspiring to win in overseas markets,
+              Twitter provides a powerful platform to connect with the most influential and receptive high-value
+              audiences overseas.
+            </p>
+            <p>
+              This report will analyze data from the Twitter operation of Xiaomi, one of China's high-tech brand
+              companies, to show how such a Chinese brand can successfully connect with influential overseas audiences
+              through Twitter's unique global real-time engagement platform.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Introduction Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="About" class="cta">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>About</h2>
+          <p>Xiaomi</p>
+        </div>
+
+        <!-- About Xiaomi -->
+        
+            
+            <div data-aos="zoom-out">
+              <img src="images/small-logo.png" alt="" style="height:60px;"><br><br>
+              <h3>Xiaomi (<a href="https://twitter.com/Xiaomi?s=20">@Xiaomi</a>)</h3>
+              <p>Company: Xiaomi Technology Co. </p>
+              <p>Headquarters: Beijing</p>
+            </div>
+            
+        <div class="row" data-aos="zoom-out">
+          
+          
+            <div class="col-lg-6 text-center text-lg-left">
+            
+            <p>Founded in April 2010 and listed on the Main Board of the Hong Kong Stock Exchange on 9 July 2018
+              (1810.HK), Xiaomi Group is an Internet company with a core focus on mobile phones, smart hardware and loT
+              platforms. With innovation and efficiency as its foundation, Xiaomi Group's vision is to "make friends
+              with users and be the coolest company in their hearts", and always insists on making good products that
+              "touch people's hearts and are affordable", so that everyone around the world can enjoy a better life
+              brought by technology. Since its establishment, Xiaomi Group has been active in the fields of artificial
+              intelligence, Internet of Things, new retail and Internet finance. </p>
+            
+          </div>
+          <div class="col-lg-6 text-center text-lg-left">
+            <p>With the rapid rise of its business
+              model of "hardware + new retail + internet", Xiaomi's revenue has exceeded $100 billion in seven years,
+              setting a historical record in the world's business history. By the end of 2018, Xiaomi had entered more than 80 countries and regions around the world, and was among
+              the top five in the mobile phone market in many countries and regions. Xiaomi is now the world's largest
+              loT consumer IoT platform, with the number of 1oT devices (excluding mobile phones and laptops) connected
+              to the IoT platform reaching approximately 151 million. In 2019, Xiaomi officially launched its "Mobile +
+              AoT" dual-engine strategy as its core strategy for the next five years.</p>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Hashtags Section ======= -->
+    <section id="Hashtags" class="portfolio">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Hashtags</h2>
+          <p>#Xiaomi</p>
+          <p>#Mi11</p>
+        </div>
+
+        <div class="row" data-aos="zoom-out">
+          <div class="col-lg-6">
+            <p>
+              The topic chosen for this report is based on Xiaomi's recent new products.
+              On the 28th of December, Xiaomi held the Chinese launch announcement of the new Mi 11 – the company’s new mainstream flagship phone for 2021.</p> 
+              <p>According to <a
+                href="https://www.anandtech.com/show/16339/xiaomi-announces-mi11-first-snapdragon-888-device">AnandTech</a>,
+              the Chinese version of the phone features a revised design and upgraded specs, giving a glimpse of the
+              high-end features that top Android phones will be shipping within the coming year.</p>
+              <p>So I decided to choose ‘#xiaomi OR #mi11’ as the co-hashtags. </p>
+              <p>The analysis period is from 00:00 on 23 December to 24:00 on 30 December.</p>
+              
+            
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="images/mi4.jpg" alt="" style="width:300px;">
+            <p>The Xiaomi Mi 11. Image: Xiaomi</p>
+          </div>
+        </div>
+
+
+      </div>
+      <!-- top tweet -->
+
+
+
+      </div>
+    </section><!-- Hashtags Section -->
+
+    <!-- ======= Data Acquisition Section ======= -->
+    <section id="DataAcquisition" class="testimonials">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Data Acquisition</h2>
+          <p>Data Acquisition</p>
+        </div>
+
+        <div data-aos="zoom-out">
+          <h3>Twint <a
+              href="https://docs.google.com/spreadsheets/d/1v3T8DCte9l6KkTFpsoikcbvs5TXhn7y6f3xwnmtNZ54/edit?usp=sharing">(data)</a>
+          </h3>
+          <br>
+          <p>
+            Some of the data in this article were obtained using <a
+              href="https://github.com/twintproject/twint">Twint</a>. It's an advanced Twitter scraping & OSINT tool
+            written in Python that doesn't use Twitter's API, allowing you to scrape a user's followers, following,
+            tweets, and more while evading most API limitations. By learning how to use Twint, I scraped 2483 tweets
+            with ‘#mi11’ between Dec 23rd and Dec 30th, including ‘username’, ‘tweet’, ‘geo’, ‘created_at’, ‘hashtags’
+            and ‘retweet’. This data is for reference only for the selection of co-hashtags, as the data has some issues
+            and I cannot fix them at the moment, for example, the "geo" list is empty and there are some strange
+            characters in the tweet text. A pivot table of the data reveals the use of hashtags related to this topic.
+            The number of tweets using only "mi11" and using both "mi11" and "Xiaomi" has a clear advantage over other
+            hashtags, which directly helps my choice of co-hashtags: '#xiaomi OR #mi11'.
+          </p>
+        </div>
+        <br>
+        <div data-aos="zoom-out">
+          <h3>TAGS v6.1 <a
+              href="https://docs.google.com/spreadsheets/d/1YIdZ8C1Ph2B4EacgPVlYr3LEvS2Nv9xYjHWBT6hHnvE/edit?usp=sharing">(data)</a>
+          </h3>
+
+          <br>
+          <p>
+            Because of the shortcomings of Twint for this data collection, I have also chosen to use TAGS to help with
+            the
+            data collection. The other part of the data came from <a href="https://tags.hawksey.info/get-tags/">TAGS
+              v6.1</a>. As TAGS has a limit on the number of tweets collected, I set up hourly updates to the archive to
+            capture a higher amount of data than the limitation. From 23 December to 30 December, 15625 pieces of data
+            were collected.
+          </p>
+        </div>
+
+      </div>
+    </section><!-- End Data Acquisition Section -->
+
+    <!-- ======= DataAnalysis Section ======= -->
+    <section id="DataAnalysis" class="faq">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Data Analysis</h2>
+          <p>Data Analysis</p>
+        </div>
+
+        <!-- Basic information of the data set -->
+        <div data-aos="zoom-out">
+          <br>
+          <h4 style="color:#f9690e; ">Basic information of the data set</h4>
+          <!-- Time series of tweets -->
+          <br>
+          <div class="row">
+            <div class="col-lg-3">
+              <p>First tweet: 23/12/2020 00:02:04 </p>
+            </div>
+            <div class="col-lg-3">
+              <p>Last tweet: 30/12/2020 23:59:29</p>
+            </div>
+            <div class="col-lg-3">
+              <p>Total tweets:15,625</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3">
+              <p>Duration: 7 days 23 hrs 57 min</p>
+            </div>
+            <div class="col-lg-3">
+              <p>Approx hours: 192</p>
+            </div>
+            <div class="col-lg-3">
+              <p>Tweets per hour: 81.4</p>
+            </div>
+          </div>
+          <br>
+          <!-- time series -->
+          <div>
+            <iframe title="Time series of tweets" aria-label="Interactive line chart" id="datawrapper-chart-fiSUv"
+              src="https://datawrapper.dwcdn.net/fiSUv/1/" scrolling="no" frameborder="0"
+              style="width: 0; min-width: 100% !important; border: none;" height="400">
+            </iframe>
+			<iframe title="[ 在此处插入标题 ]" aria-label="Interactive line chart" id="datawrapper-chart-ilyKH" src="https://datawrapper.dwcdn.net/ilyKH/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+			</script>
+            <script type="text/javascript">
+              !function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+            </script>
+          </div>
+          <br>
+          <p>
+            The data set included 6,060 original tweets and 9,565 retweets. It was clear to show that about 61% of the
+            tweets are retweets and about 39% are original tweets.
+          </p>
+          <!-- ratio of tweet to retweet -->
+          <div id="tweetbiretweet" style="height: 250px; width:400px;"></div>
+
+        </div>
+
+        <!-- Top tweeters & Top retweeters & Top retweet -->
+        <div data-aos="zoom-out">
+          <br><br>
+          <h4 style="color:#f9690e; ">Top tweeters & Top retweeters & Top retweet</h4>
+          <br>
+          <p>
+            By using the Pivot Table of excel, there were 15,625 users in original data, and the top tweeter and was the
+            account ‘FassTechFR’ which tweeted 124 tweets during the period. And the top retweeter was ‘Sharma_G9’ which
+            retweeted 97 tweets.
+          </p>
+          <p>
+            In order to acquire information from general people, it was important to exclude invalid data, such as
+            robots.
+            There were two tools to identify the user accounts: Botometer (https://botometer.iuni.iu.edu/#!/) and
+            foller.me (https://foller.me/). Through the use of Botometer and the results of the manual secondary
+            inspection, it is found that in the top 20 tweeters, 9 accounts are bots, and 7 bots are found in the top 10
+            retweeters. After excluding the robot, we can get the following ranking.
+          </p>
+
+          <!-- top tweeter/retweeter list -->
+          <div class="list-er">
+            <div class="row" data-aos="zoom-out">
+              <div class="col-lg-6 text-center text-lg-left">
+                <!-- toptweeters -->
+
+                <div class="form">
+                  <style type="text/css">
+                    .tftable {
+                      font-size: 12px;
+                      color: #333333;
+                      width: 100%;
+                      border-width: 1px;
+                      border-color: #a9a9a9;
+                      border-collapse: collapse;
+                    }
+
+                    .tftable th {
+                      color: #ffffff;
+                      font-size: 12px;
+                      background-color: #f9690e;
+                      border-width: 1px;
+                      padding: 8px;
+                      border-style: solid;
+                      border-color: #a9a9a9;
+                      text-align: left;
+                    }
+
+                    .tftable tr {
+                      background-color: #ffffff;
+                    }
+
+                    .tftable td {
+                      font-size: 12px;
+                      border-width: 1px;
+                      padding: 8px;
+                      border-style: solid;
+                      border-color: #a9a9a9;
+                    }
+                  </style>
+
+                  <table class="tftable" border="1">
+                    <tr>
+                      <th></th>
+                      <th>Top tweeters</th>
+                      <th>Amount of tweets</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>FassTechFR</td>
+                      <td>124</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Sharma_G9</td>
+                      <td>109</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>IamAyan_Sarkar</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Rrv_06</td>
+                      <td>65</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>GadgetsFlix</td>
+                      <td>64</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Utsav_raj22</td>
+                      <td>63</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>passionategeekz</td>
+                      <td>60</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>NishantBareilly</td>
+                      <td>58</td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>Litu_ck</td>
+                      <td>55</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>ShyamSu30218972</td>
+                      <td>54</td>
+                    </tr>
+                  </table>
+
+
+                </div>
+
+              </div>
+              <div class="col-lg-6 text-center text-lg-left">
+                <!-- topretweeters -->
+
+                <div>
+                  <table class="tftable" border="1">
+                    <tr>
+                      <th></th>
+                      <th>Top retweeters</th>
+                      <th>Amount of retweets</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Sharma_G9 </td>
+                      <td>97 </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>FassTechFR </td>
+                      <td>89 </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>IamAyan_Sarkar </td>
+                      <td>88 </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Rrv_06 </td>
+                      <td>62 </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Litu_ck </td>
+                      <td>55 </td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>ShyamSu30218972 </td>
+                      <td>54 </td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>Asif_ahmed33 </td>
+                      <td>50 </td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>iAnurag8 </td>
+                      <td>49 </td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>ManishKRaj2 </td>
+                      <td>41 </td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>Indian19100 </td>
+                      <td>37 </td>
+                    </tr>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <br>
+          <p>
+            On one hand, 4.7% of tweet/retweets came from the top 10 tweeters. On the other hand, 6.5% of retweets came
+            from the top retweeters.
+          </p>
+          <br>
+
+          <!-- top tweets -->
+          <p style="color:#f9690e;">Top 3 tweets</p>
+          <p>
+            The top 1 and top 2 retweets for the whole period were from @manukumarjain. He is Global VP @Xiaomi and MD
+            @XiaomiIndia. The top 3 retweet was from @atytse, who is the GM @XiaomiIndonesia.
+          </p>
+
+          <!-- embeded tweet -->
+          <div class="row">
+            <div class="col-lg-4">
+              <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">US$ <a
+                    href="https://twitter.com/hashtag/100Billion?src=hash&amp;ref_src=twsrc%5Etfw">#100Billion</a>!
+                  🎉<br><br>Happy to share: Xiaomi has crossed US$ 100 Bn market cap!<br><br>I thank everyone who has
+                  believed in us - Mi Fans, business partners &amp; team members.<br><br>&quot;No dream is too big!
+                  Especially if you believe in yourself, work hard, and never give up!” 🙏<br><br>I ❤️ <a
+                    href="https://twitter.com/hashtag/Mi?src=hash&amp;ref_src=twsrc%5Etfw">#Mi</a> <a
+                    href="https://twitter.com/hashtag/Xiaomi?src=hash&amp;ref_src=twsrc%5Etfw">#Xiaomi</a> <a
+                    href="https://t.co/BNV6Moe6TW">pic.twitter.com/BNV6Moe6TW</a></p>&mdash; Manu Kumar Jain
+                (@manukumarjain) <a
+                  href="https://twitter.com/manukumarjain/status/1342065889168932864?ref_src=twsrc%5Etfw">December 24,
+                  2020</a>
+              </blockquote>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="col-lg-4">
+              <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">&quot;Beta, shaadi kab kar rahe ho?&quot; - all of us faced this question so many
+                  times 😁<a href="https://twitter.com/hashtag/MiFan?src=hash&amp;ref_src=twsrc%5Etfw">#MiFan</a> <a
+                    href="https://twitter.com/kamalahamad65?ref_src=twsrc%5Etfw">@kamalahamad65</a> answered this by
+                  saying - &quot;I will not get marry until I get the <a
+                    href="https://twitter.com/hashtag/Mi10TPro?src=hash&amp;ref_src=twsrc%5Etfw">#Mi10TPro</a>&quot;.
+                  🤭<br><br>Kamal bhai - now you can get married peacefully. 🙏 <a
+                    href="https://t.co/uKhOeGdnb0">https://t.co/uKhOeGdnb0</a><br><br>I ❤️ <a
+                    href="https://twitter.com/hashtag/Mi?src=hash&amp;ref_src=twsrc%5Etfw">#Mi</a> <a
+                    href="https://twitter.com/hashtag/Xiaomi?src=hash&amp;ref_src=twsrc%5Etfw">#Xiaomi</a></p>&mdash;
+                Manu
+                Kumar Jain (@manukumarjain) <a
+                  href="https://twitter.com/manukumarjain/status/1341767994842566656?ref_src=twsrc%5Etfw">December 23,
+                  2020</a>
+              </blockquote>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="col-lg-4">
+              <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">Wow! At Xiaomi&#39;s China headquarter, <a
+                    href="https://twitter.com/leijun?ref_src=twsrc%5Etfw">@leijun</a> just released the latest flagship
+                  <a href="https://twitter.com/hashtag/Mi11?src=hash&amp;ref_src=twsrc%5Etfw">#Mi11</a> to close out
+                  2020
+                  &amp; welcome 2021! <br>Snapdragon 888, 2k 120Hz display, 50W wireless fast charge, 4600mAh, tech x
+                  fashion design, harmon kardon speakers and so much more!<br><br>RT if you want this in 🇮🇩! <a
+                    href="https://t.co/oeO1mhGDwu">pic.twitter.com/oeO1mhGDwu</a>
+                </p>&mdash; Alvin Tse #MiFan (@atytse)
+                <a href="https://twitter.com/atytse/status/1343558644978216960?ref_src=twsrc%5Etfw">December 28,
+                  2020</a>
+              </blockquote>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Text understanding -->
+        <div data-aos="zoom-out">
+          <br> <br>
+          <h4 style="color:#f9690e; ">Text understanding</h4>
+
+          <!-- Word Cloud Generator -->
+          <br>
+          <a href="https://www.jasondavies.com/wordcloud/#%2F%2Fwww.jasondavies.com%2Fwordcloud%2Fabout%2F">Word Cloud
+            Generator</a>
+
+          <p>I used word cloud to get the keywords of all these tweets. We can see some keywords from it to better
+            understand the content of text. Like ‘Xiaomi’, ‘Mi’ and ‘Mi11’, they are the words for the brand and
+            products.
+            The word ‘snapdragon’ is the system for the new products. ‘Wireless’, ‘4600mAh’, ‘108MP’ and ‘120Hz’ are the
+            words for their features.</p>
+          <!-- word cloud -->
+          <embed src="images/wordcloud.svg" type="image/svg+xml" />
+          <br>
+
+          <!-- Natural language understanding -->
+          <a href="https://natural-language-understanding-demo.ng.bluemix.net/">Natural language understanding</a>
+          <p>Natural Language Understanding is a collection of APIs that offer text analysis through natural language
+            processing. This set of APIs can analyze text to help you understand its concepts, entities, keywords,
+            sentiment, and more. I put the top 50 tweets in for analysis and got the following results:</p>
+
+          <div class="row">
+            <div class="col-lg-2">
+              <p>Sentiment:</p>
+            </div>
+            <div class="col-lg-2">
+              <p>Positive: 0.46</p>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-lg-2">
+              <p>Overall Emotion:</p>
+            </div>
+            <div class="col-lg-2">
+              <p>😢 sadness 0.15</p>
+            </div>
+            <div class="col-lg-2">
+              <p>😉 joy 0.65</p>
+            </div>
+            <div class="col-lg-2">
+              <p>😨 fear 0.07</p>
+            </div>
+            <div class="col-lg-2">
+              <p>😖 disgust 0.12</p>
+            </div>
+            <div class="col-lg-2">
+              <p>😡 anger 0.05</p>
+            </div>
+          </div>
+
+          <p">Categories:</p>
+            <p>Technology and Computing/&nbsp;Consumer electronics/&nbsp;TV and Video
+              equipment/&nbsp;Televisions/&nbsp;LCD TVs/&nbsp;Tech News/&nbsp;Camera Batteries</p>
+
+        </div>
+
+
+        <!-- Location -->
+        <div data-aos="zoom-out">
+          <br><br>
+          <!-- Location of tweets and profiles -->
+          <h4 style="color:#f9690e; ">Location of tweets and profiles</h4>
+
+          <br>
+          <p>The tweets mostly were from India, ‘from the cloud’, France, Brasil and Indonesia. There are 9,623 users
+            whose profiles have a location, which is about 61.6% of all users. But there are only 45 tweets with
+            geo-coordinates, which is about 0.2% of all tweets.
+          </p>
+          <p>Here is an interesting phenomenon: the largest user group comes from India. Even though the Indian
+            government recently banned Chinese mobile phone applications and China and India had frictions in the border
+            areas, Xiaomi is still the best selling mobile phone brand in the Indian online market.</p>
+
+          <!-- geo & profiles charts -->
+          <div class="row">
+            <div class="col-lg-4 text-center text-lg-left">
+              <!-- with geo or not -->
+              <div id="geocoded" style="height: 200px; width:400px;"></div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-left">
+              <!-- profiles with location or not -->
+              <div id="profiles" style="height: 200px; width:400px;"></div>
+            </div>
+          </div>
+
+          <br><br>
+          <h4 style="color:#f9690e; ">Histogram of tweeters volumes</h4>
+
+          <!-- Histogram of tweeters volumes -->
+          <br>
+          <p>We can also find that 6 person tweeted more than 100 times, 15 people tweeted 50-100 times, 176 people
+            tweeted 10-49 times, 217 people tweeted 5-9 times, 382 people tweeted 3-4 times and 6340 people tweeted 1-2
+            times.</p>
+
+          <div id="barr"></div>
+
+
+          <!-- Demographic groupings -->
+          <br><br>
+          <h4 style="color:#f9690e; ">Demographic groupings</h4>
+          <br>
+          <p>There are two indexes to discuss the information influence, the amounts of followers and the amount of
+            users' friends. There were 2 users which had more than 10 million followers and more than two thousand users
+            had 100-999 followers.
+          </p>
+          <br>
+          <!-- The amounts of users' friends -->
+          <p style="color:#f9690e;">The amounts of users' friends</p>
+          <p>After statistics, it is found that the top three people in terms of number of friends are: <a
+              href="https://twitter.com/Ebox_Support?s=20">@Ebox_Support</a>, <a
+              href="https://twitter.com/chollistas?s=20">@chollistas</a> and <a
+              href="https://twitter.com/IamAyan_Sarkar?s=20">@IamAyan_Sarkar</a>. The number of their friends are all
+            over 100,000.</p>
+          <!-- friend count chart -->
+          <div id="barr3" style="height: 250px; width:800px;"></div>
+          <br>
+          <!-- The amounts of followers -->
+          <p style="color:#f9690e;">The amounts of followers</p>
+          <p>The tweeter who has the largest number of followers is <a
+              href="https://twitter.com/detikcom?s=20">@detikcom</a> with 98,886,697 followers. Detikcom is an
+            Indonesian digital media company. So it's very obvious that in the process of marketing in target countries,
+            Xiaomi chose local authoritative social media accounts for promotion.</p>
+          <!-- user count chart -->
+          <div id="barr2"></div>
+
+
+        </div>
+      </div>
+
+
+    </section><!-- End Data Analysis Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Made by Yilin Li</h3>
+      <p>The second coursework for Digital Sandbox in MSc User Experience Engineering at the University of Goldsmiths.
+      </p>
+      <!-- social links -->
+      <div class="social-links">
+        <a href="//twitter.com/riyirinn" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="//instagram.com/riyirinn" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="//www.linkedin.com/in/yilinli907" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+
+      <div class="copyright">
+        &copy; Copyright <strong><span>Selecao</span></strong>. All Rights Reserved
+      </div>
+
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+  <!-- back to top -->
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+
+
+  <!-- JS part -->
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- emoji js-->
+  <script>
+    $(function () {
+      var $text = $('.emojstext');
+      var html = $text.html().trim().replace(/\n/g, '<br/>');
+      html = jEmoji.softbankToUnified(html);
+      html = jEmoji.googleToUnified(html);
+      html = jEmoji.docomoToUnified(html);
+      html = jEmoji.kddiToUnified(html);
+      $text.html(jEmoji.unifiedToHTML(html));
+    });
+  </script>
+
+  <!-- C3 js -->
+  <script type="text/javascript">
+
+    // pie charts
+    // ratio of tweet to retweet
+    var chart = c3.generate({
+      bindto: '#tweetbiretweet',
+      data: {
+
+        columns: [
+          ['Original tweets', 6060],
+          ['Retweets', 9565],
+
+        ],
+        type: 'pie'
+      },
+      color: {
+        pattern: ['#fde3a7', '#f27935']
+      }
+    });
+
+    // location
+    var chart = c3.generate({
+      bindto: '#location',
+      data: {
+
+        columns: [
+          ['Tweets with geo code', 45],
+          ['Users with location', 9623],
+
+        ],
+        type: 'pie'
+      },
+      color: {
+        pattern: ['#fde3a7', '#f27935']
+      }
+    });
+
+    // profiles with geo
+    var chart = c3.generate({
+      bindto: '#profiles',
+      data: {
+
+        columns: [
+          ['Profiles with location', 61.6],
+          ['Profiles without location', 38.4],
+
+        ],
+        type: 'pie'
+      },
+      color: {
+        pattern: ['#fde3a7', '#f27935']
+      }
+    });
+
+    // geo code
+    var chart = c3.generate({
+      bindto: '#geocoded',
+      data: {
+
+        columns: [
+          ['Tweets with geo', 0.2],
+          ['Tweets without geo', 98.8],
+
+        ],
+        type: 'pie'
+
+      },
+      color: {
+        pattern: ['#fde3a7', '#f27935']
+      }
+    });
+
+    // Histogram
+
+    // Histogram of tweeters volumes
+    var chart = c3.generate({
+      bindto: '#barr',
+      padding: {
+        top: 10,
+        right: 110,
+        bottom: 10,
+        left: 110
+      },
+      size: {
+        height: 400
+      },
+      bar: {
+        width: 28
+      },
+
+      data: {
+        x: 'Times',
+        columns: [
+          ['Times', '100+', '50-100', '10-49', '5-9', '3-4', '1-2'],
+          ['Amount', 6, 15, 176, 217, 382, 6340]
+        ],
+        type: 'bar',
+        color: function (inColor, data) {
+          var colors = ['#fde3a7', '#fabe58', '#f5ab35', '#eb974e', '#e87e04', '#f2784b'];
+          if (data.index !== undefined) {
+            return colors[data.index];
+          }
+
+          return inColor;
+        }
+      },
+
+      legend: {
+        show: false
+      },
+      axis: {
+        rotated: true,
+        x: {
+          type: 'category'
+        }
+      },
+    });
+
+
+    // Followers count
+    var chart = c3.generate({
+      bindto: '#barr2',
+      padding: {
+        top: 10,
+        right: 120,
+        bottom: 10,
+        left: 120
+      },
+      size: {
+        height: 400
+      },
+      bar: {
+        width: 28
+      },
+      data: {
+        x: 'followers_count',
+        columns: [
+          ['followers_count', '10,000,000+', '1,000,000-9,999,999', '100,000-999,999', '10,000-99,999', '1,000-9,999', '100-999', '10-99', '0-9'],
+          ['user_count', 2, 23, 92, 250, 955, 2196, 1946, 1672]
+        ],
+        type: 'bar',
+        color: function (inColor, data) {
+          var colors = ['#fde3a7', '#fabe58', '#f5ab35', '#eb974e', '#e87e04', '#f27935', '#f9690e', '#d35400'];
+          if (data.index !== undefined) {
+            return colors[data.index];
+          }
+
+          return inColor;
+        }
+      },
+
+      legend: {
+        show: false
+      },
+      axis: {
+        rotated: true,
+        x: {
+          type: 'category'
+        }
+      },
+    });
+
+    // Friends count
+
+    var chart = c3.generate({
+      bindto: '#barr3',
+      data: {
+
+        columns: [
+          ['100,000+', 14],
+          ['10,000-99,999', 125],
+          ['1,000-9,999', 1302],
+          ['100-999', 3215],
+          ['10-99', 1853],
+          ['0-9', 11095415],
+
+        ],
+        type: 'pie',
+
+      },
+      color: {
+        pattern: ['#fde3a7', '#fabe58', '#f5ab35', '#eb974e', '#e87e04', '#f27935']
+      }
+    });
+	
+	UIkit.slideshow("#huandengpian");
+
+  </script>
+
+</body>
+
+</html>
